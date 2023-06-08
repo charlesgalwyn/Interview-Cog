@@ -8,6 +8,9 @@ import {
   GET_DATA_SUCCESS,
 } from "./actionTypes"
 
+
+
+
 const getDataReq = () => {
   return {
     type: GET_DATA_REQUEST,
