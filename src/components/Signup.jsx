@@ -75,18 +75,10 @@ export default function Signup() {
               lineHeight={1.1}
               fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
             >
-              Cognisite
-              <Text
-                as={"span"}
-                bgGradient="linear(to-r, yellow.400,yellow)"
-                bgClip="text"
-              >
-                Technologies
-              </Text>
+              Cognisite Technologies
             </Heading>
             <Text color={"gray.500"} fontSize={{ base: "sm", sm: "md" }}>
-              We’re looking for amazing engineers just like you! Become a part
-              of our rockstar engineering team and skyrocket your career!
+              Register Your Account here !
             </Text>
           </Stack>
           <Box as={"form"} onSubmit={(e) => handleSubmit(e)} mt={10}>
@@ -142,12 +134,9 @@ export default function Signup() {
               fontFamily={"heading"}
               mt={8}
               w={"full"}
-              bgGradient="linear(to-r, red.400,pink.400)"
               color={"white"}
-              _hover={{
-                bgGradient: "linear(to-r, red.400,pink.400)",
-                boxShadow: "xl",
-              }}
+              colorScheme="pink"
+              variant="solid"
             >
               Submit
             </Button>
