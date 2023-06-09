@@ -12,6 +12,7 @@ import {
   AspectRatio,
   Icon,
   useToast,
+  Spinner
 } from "@chakra-ui/react"
 import axios from "axios"
 import { useState } from "react"
@@ -21,6 +22,8 @@ export default function Signup() {
   const [name, setName] = useState("")
   const [mobile, setMobile] = useState("")
   const [password, setPassword] = useState("")
+  const [loading, setLoading] = useState(false);
+
   const toast = useToast()
   const navigate = useNavigate()
 
@@ -43,6 +46,7 @@ export default function Signup() {
       })
       navigate("/")
     })
+    setLoading(false);
   }
 
   return (
@@ -137,8 +141,9 @@ export default function Signup() {
               color={"white"}
               colorScheme="pink"
               variant="solid"
+              loadingText='Submitting'
             >
-              Submit
+              {loading ? <Spinner /> : "Submit"}
             </Button>
           </Box>
         </Stack>

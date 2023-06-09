@@ -10,7 +10,6 @@ import {
 
 
 
-
 const getDataReq = () => {
   return {
     type: GET_DATA_REQUEST,
